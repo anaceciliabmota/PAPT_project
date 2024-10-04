@@ -39,3 +39,18 @@ class Data:
         self.M = 100
         self.shift_time_list = [[0, 1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 11], [12, 13, 14, 15]]
 
+    def get_classes_hour(self, professor_index):
+        
+        preference_list = self.list_of_professors[professor_index].preference_list
+        classes_hour = {}
+
+        for pref in preference_list:
+            c = self.list_of_classes[pref.class_index]
+            classes_hour[c.index] = c.time
+        
+         # each line of the classes_hour matrix is a class j
+        # each column of the classes_hour matrix is a hour (ex: first column is 2M1)
+    
+        return classes_hour
+
+
