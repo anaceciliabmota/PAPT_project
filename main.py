@@ -3,7 +3,7 @@ from structs import *
 from model import *
 from model_class import *
 
-filename = "/home/anacecilia/Documents/PAPT/AlocacaoProfessoresTurmas2024.2.xlsx"
+filename = "/home/cecilia/Documents/PAPT/AlocacaoProfessoresTurmas2024.2.xlsx"
 
 #filename = "modified_file.xlsx"
 
@@ -17,6 +17,6 @@ model.create_model(data)
 
 model.save("model2.lp")
 
-# solve(model)
+model.solve()
 
 

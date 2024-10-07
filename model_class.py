@@ -46,7 +46,7 @@ class ModelOptimization:
         penalty += self.overload_penalty(data)
         penalty += self.shift_penalty(data)
         penalty += self.work_at_night_penalty(data)
-        penalty += self.pre_alocation_penalty(data)
+        #penalty += self.pre_alocation_penalty(data)
 
         return penalty
 
@@ -139,12 +139,18 @@ class ModelOptimization:
         self.sigma = [self.m.add_var(name=f"sigma_{i}", var_type=INTEGER) for i in data.P]
     
     def create_constraints(self, data):
-        
+    
         self.professor_assignment_constraint(data)
         self.credit_limit_constraint(data)
         self.scheduling_conflit_constraint(data)
         self.credit_limit_day_constraint(data)
         self.professor_day_limit_constraint(data)
+        self.day_availability_constraint(data)
+        self.professor_shift_assignment_constraint(data)
+        self.shift_center_conflict_constraint(data)
+        self.morning_after_constraint(data)
+        self.consecutive_shifts_constraint(data)
+        self.night_shifts_constraint(data)
         
     def professor_assignment_constraint(self,data):
         # all classes must be assigned to a professor (9)
@@ -226,21 +232,125 @@ class ModelOptimization:
             
             self.m += summation <= data.list_of_professors[i].max_class_days + self.a_dias[i], f"constr(13)({i})"
     
-    # def day_availability_constraint(self, data):
-    #     # check if a professor is scheduled to teach on a specific day. (14)
+    def day_availability_constraint(self, data):
+        # check if a professor is scheduled to teach on a specific day. (14)
 
-    #     for i in data.P:
-    #         classes_hour = data.get_classes_hour(i)
+        for i in data.P:
+            classes_hour = data.get_classes_hour(i)
 
-    #         for d in data.D:
-    #             summation = 0
-    #             for j in classes_hour.keys():
+            for d in data.D:
+                summation = 0
+                for j in classes_hour.keys():
+                    w = 0
+                    for h in range(16*d, 16*d + 16):
+                        w += classes_hour[j][h]
+                    
+                    if w != 0: # the class j is in day d
+                        summation += self.x[i][j]
                 
+                self.m += summation <= data.M * self.y[i][d], f"constr(14)({i})({d})"
+
+    # constraint to be done:
+    # ensure that a professor is not scheduled at a non available time. (15)
+
+    def professor_shift_assignment_constraint(self, data):
+        # determine if professor i will be teaching at center k on day d during shift s. (16)
+
+        for i in data.P:
+            classes_hour = data.get_classes_hour(i)
+
+            for d in data.D: # to be done: change to professor  available days
+                for k_name, k in data.C.items():
+                    for s in data.S:
+                        shift_index = s-1
+                        summation = 0
+
+                        for j in classes_hour.keys():
+                            c = data.list_of_classes[j]
+
+                            if c.center == k_name:
+                                w = 0
+
+                                for h in data.shift_time_list[shift_index]:
+                                    w += classes_hour[j][h + (16 * d)]
+
+                                if w > 0: #There is class j during that shift on that day
+                                    summation += self.x[i][j]
+                        
+                        self.m += summation <= data.M * self.lamb[i][k][d][shift_index] , f"constr(16)({i})({k_name})({d})({s})"
+    
+    def shift_center_conflict_constraint(self, data):
+        # ensure that a professor will not be scheduled in more than one center in the same shift. (17)
+
+        for i in data.P:
+            for s in data.S:
+                for d in data.D:
+                    summation = 0
+
+                    for k in data.C.values():
+                        summation += self.lamb[i][k][d][s-1]
+
+                    self.m += summation <= 1 ,   f"constr(17)({i})({s})({d})"
+
+    def morning_after_constraint(self, data):
+        # prevents a professor from teaching classes in the morning if they have taught classes the night before. (18)
+
+        for i in data.P:
+            for d in range(len(data.D)-1):  #to be done: change to professor available days 
+                # verify if really is this range
+                sum_night = 0
+                sum_morning = 0
+
+                for k in data.C.values():
+                    sum_night += self.lamb[i][k][d][3-1]
+                    sum_morning += self.lamb[i][k][d+1][1-1]
+                
+                self.m += sum_night + sum_morning <= 1 + self.beta[i][d], f"constr(18)({i})({d})"
+
+    def consecutive_shifts_constraint(self, data):
+        # ensure a professor is scheduled for consecutive shifts. (19)
+        
+        for i in data.P:
+            for d in data.D: #to be done: change to professor available days 
+                sum_morning = 0
+                sum_afternoon = 0
+                sum_night = 0
+
+                for k in data.C.values():
+                    sum_morning += self.lamb[i][k][d][1-1]
+                    sum_afternoon += self.lamb[i][k][d][2-1]
+                    sum_night += self.lamb[i][k][d][3-1]
+
+                self.m += sum_morning + sum_night <= 1 + sum_afternoon + self.alpha[i][d], f"constr(19)({i})({d})"
+
+    def night_shifts_constraint(self, data):
+        # Minimize the number of night shifts scheduled for a professor. (20)
+
+        for i in data.P:
+            summation = 0
+            for k in data.C.values():
+                for d in data.D:
+                    summation += self.lamb[i][k][d][3-1]
+            
+            self.m += summation == self.sigma[i]
+    
 
     def save(self,filename):
         self.m.write(filename)
     #with open(filename, "r") as f: 
         # print(f.read())
+    
+    def solve(self):
+        status = self.m.optimize()
+
+        print("Status = ", status)
+        print(f"Solution value  = {self.m.objective_value:.2f}\n")
+
+        print("Solution:")
+        for v in self.m.vars:
+            if v.x > 0:
+                print(f"{v.name} = {v.x:.2f}")
+
 
 
 

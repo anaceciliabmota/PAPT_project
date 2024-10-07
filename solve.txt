@@ -1,0 +1,598 @@
+Welcome to the CBC MILP Solver 
+Version: Trunk
+Build Date: Oct 24 2021 
+
+Starting solution of the Linear programming relaxation problem using Primal Simplex
+
+Clp0024I Matrix will be packed to eliminate 7649 small elements
+Coin0506I Presolve 505 (-2603) rows, 576 (-3458) columns and 1919 (-7763) elements
+Clp1000I sum of infeasibilities 20.0178 - average 0.0396393, 310 fixed columns
+Coin0507I Presolve determined that the problem was infeasible with tolerance of 1e-08
+Clp0029I End of values pass after 266 iterations
+Clp0014I Perturbing problem by 0.001% of 4.3477397 - largest nonzero change 3.066624e-05 ( 0.0020710002%) - largest zero change 2.982246e-05
+Clp0000I Optimal - objective value 626421
+Clp0000I Optimal - objective value 626421
+Clp0000I Optimal - objective value 626421
+Coin0511I After Postsolve, objective 626421, infeasibilities - dual 0 (0), primal 0 (0)
+Clp0032I Optimal objective 626421 - 0 iterations time 0.032, Presolve 0.00, Idiot 0.03
+
+Starting MIP optimization
+Cgl0003I 0 fixed, 93 tightened bounds, 73 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 22 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 7 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 5 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 2 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 2 strengthened rows, 0 substitutions
+Cgl0003I 0 fixed, 0 tightened bounds, 1 strengthened rows, 0 substitutions
+Cgl0004I processed model has 535 rows, 683 columns (683 integer (590 of which binary)) and 2140 elements
+Coin3009W Conflict graph built in 0.000 seconds, density: 0.193%
+Cgl0015I Clique Strengthening extended 0 cliques, 0 were dominated
+Cbc0045I Nauty did not find any useful orbits in time 0.004675
+Cbc0038I Initial state - 39 integers unsatisfied sum - 15.375
+Cbc0038I Pass   1: suminf.    7.16667 (16) obj. -361100 iterations 108
+Cbc0038I Pass   2: suminf.    7.16667 (16) obj. -361100 iterations 0
+Cbc0038I Pass   3: suminf.    0.00000 (0) obj. -231100 iterations 18
+Cbc0038I Solution found of -231100
+Cbc0038I Cleaned solution of -231100
+Cbc0038I Before mini branch and bound, 583 integers at bound fixed and 53 continuous of which 13 were internal integer and 0 internal continuous
+Cbc0038I Full problem 535 rows 683 columns, reduced to 11 rows 15 columns
+Cbc0038I Mini branch and bound improved solution from -231100 to -237100 (0.07 seconds)
+Cbc0038I Round again with cutoff of -250801
+Cbc0038I Reduced cost fixing fixed 30 variables on major pass 2
+Cbc0038I Pass   4: suminf.    7.16667 (16) obj. -361100 iterations 0
+Cbc0038I Pass   5: suminf.    6.16667 (14) obj. -306100 iterations 4
+Cbc0038I Pass   6: suminf.    0.85820 (4) obj. -250801 iterations 19
+Cbc0038I Pass   7: suminf.    0.64701 (2) obj. -250801 iterations 10
+Cbc0038I Pass   8: suminf.    0.35820 (2) obj. -250801 iterations 8
+Cbc0038I Pass   9: suminf.    5.48909 (15) obj. -250801 iterations 129
+Cbc0038I Pass  10: suminf.    4.50576 (11) obj. -250801 iterations 45
+Cbc0038I Pass  11: suminf.    2.33909 (5) obj. -250801 iterations 67
+Cbc0038I Pass  12: suminf.    2.33909 (5) obj. -250801 iterations 1
+Cbc0038I Pass  13: suminf.    2.33909 (5) obj. -250801 iterations 55
+Cbc0038I Pass  14: suminf.    2.33909 (5) obj. -250801 iterations 2
+Cbc0038I Pass  15: suminf.    2.33909 (5) obj. -250801 iterations 1
+Cbc0038I Pass  16: suminf.    7.55991 (20) obj. -250801 iterations 102
+Cbc0038I Pass  17: suminf.    2.33333 (6) obj. -250801 iterations 80
+Cbc0038I Pass  18: suminf.    1.35991 (3) obj. -250801 iterations 41
+Cbc0038I Pass  19: suminf.    1.00000 (3) obj. -250801 iterations 36
+Cbc0038I Pass  20: suminf.    1.00000 (3) obj. -250801 iterations 9
+Cbc0038I Pass  21: suminf.    1.00000 (3) obj. -250801 iterations 0
+Cbc0038I Pass  22: suminf.    1.03599 (3) obj. -250801 iterations 21
+Cbc0038I Pass  23: suminf.    6.64676 (19) obj. -250801 iterations 146
+Cbc0038I Pass  24: suminf.    2.64738 (7) obj. -250801 iterations 83
+Cbc0038I Pass  25: suminf.    0.84809 (2) obj. -250801 iterations 21
+Cbc0038I Pass  26: suminf.    0.84809 (2) obj. -250801 iterations 2
+Cbc0038I Pass  27: suminf.    0.84809 (2) obj. -250801 iterations 59
+Cbc0038I Pass  28: suminf.    9.71409 (26) obj. -250801 iterations 117
+Cbc0038I Pass  29: suminf.    5.88909 (14) obj. -250801 iterations 55
+Cbc0038I Pass  30: suminf.    1.94709 (4) obj. -250801 iterations 79
+Cbc0038I Pass  31: suminf.    1.44709 (3) obj. -250801 iterations 1
+Cbc0038I Pass  32: suminf.    1.44709 (3) obj. -250801 iterations 15
+Cbc0038I Pass  33: suminf.    1.44709 (3) obj. -250801 iterations 0
+Cbc0038I Rounding solution of -262320 is better than previous of -237100
+
+Cbc0038I Before mini branch and bound, 441 integers at bound fixed and 36 continuous of which 5 were internal integer and 0 internal continuous
+Cbc0038I Full problem 535 rows 683 columns, reduced to 91 rows 101 columns
+Cbc0038I Mini branch and bound improved solution from -262320 to -339200 (0.11 seconds)
+Cbc0038I Round again with cutoff of -346181
+Cbc0038I Reduced cost fixing fixed 70 variables on major pass 3
+Cbc0038I Pass  33: suminf.    7.16667 (16) obj. -361100 iterations 0
+Cbc0038I Pass  34: suminf.    5.82376 (16) obj. -346181 iterations 8
+Cbc0038I Pass  35: suminf.    5.37475 (13) obj. -346181 iterations 32
+Cbc0038I Pass  36: suminf.    2.70808 (6) obj. -346181 iterations 15
+Cbc0038I Pass  37: suminf.    2.70808 (6) obj. -346181 iterations 6
+Cbc0038I Pass  38: suminf.    2.70808 (6) obj. -346181 iterations 7
+Cbc0038I Pass  39: suminf.    2.70808 (6) obj. -346181 iterations 1
+Cbc0038I Pass  40: suminf.    2.70808 (6) obj. -346181 iterations 42
+Cbc0038I Pass  41: suminf.    7.52930 (19) obj. -346181 iterations 90
+Cbc0038I Pass  42: suminf.    5.33399 (14) obj. -346181 iterations 45
+Cbc0038I Pass  43: suminf.    4.83399 (13) obj. -346181 iterations 2
+Cbc0038I Pass  44: suminf.    3.69708 (8) obj. -346181 iterations 20
+Cbc0038I Pass  45: suminf.    3.69708 (8) obj. -346181 iterations 1
+Cbc0038I Pass  46: suminf.    2.69708 (6) obj. -346181 iterations 33
+Cbc0038I Pass  47: suminf.    2.69708 (6) obj. -346181 iterations 2
+Cbc0038I Pass  48: suminf.    2.69708 (6) obj. -346181 iterations 7
+Cbc0038I Pass  49: suminf.    2.69708 (6) obj. -346181 iterations 2
+Cbc0038I Pass  50: suminf.    2.69708 (6) obj. -346181 iterations 4
+Cbc0038I Pass  51: suminf.   10.81211 (31) obj. -346181 iterations 97
+Cbc0038I Pass  52: suminf.    7.75928 (19) obj. -346181 iterations 49
+Cbc0038I Pass  53: suminf.    6.75909 (17) obj. -346181 iterations 1
+Cbc0038I Pass  54: suminf.    3.39808 (8) obj. -346181 iterations 24
+Cbc0038I Pass  55: suminf.    3.00698 (8) obj. -346181 iterations 27
+Cbc0038I Pass  56: suminf.    2.49808 (5) obj. -346181 iterations 25
+Cbc0038I Pass  57: suminf.    1.99808 (4) obj. -346181 iterations 4
+Cbc0038I Pass  58: suminf.    1.99808 (4) obj. -346181 iterations 0
+Cbc0038I Pass  59: suminf.    1.99808 (4) obj. -346181 iterations 6
+Cbc0038I Pass  60: suminf.    1.99808 (4) obj. -346181 iterations 0
+Cbc0038I Pass  61: suminf.    1.99808 (4) obj. -346181 iterations 2
+Cbc0038I Pass  62: suminf.    7.39389 (17) obj. -346181 iterations 66
+Cbc0038I No solution found this major pass
+Cbc0038I Before mini branch and bound, 507 integers at bound fixed and 48 continuous of which 8 were internal integer and 0 internal continuous
+Cbc0038I Full problem 535 rows 683 columns, reduced to 26 rows 34 columns
+Cbc0038I Mini branch and bound improved solution from -339200 to -341110 (0.15 seconds)
+Cbc0038I Round again with cutoff of -354557
+Cbc0038I Reduced cost fixing fixed 71 variables on major pass 4
+Cbc0038I Pass  62: suminf.    7.16667 (16) obj. -361100 iterations 0
+Cbc0038I Pass  63: suminf.    6.16667 (15) obj. -354557 iterations 8
+Cbc0038I Pass  64: suminf.    2.84566 (6) obj. -354557 iterations 47
+Cbc0038I Pass  65: suminf.    2.84566 (6) obj. -354557 iterations 1
+Cbc0038I Pass  66: suminf.    2.84566 (6) obj. -354557 iterations 40
+Cbc0038I Pass  67: suminf.    2.84566 (6) obj. -354557 iterations 2
+Cbc0038I Pass  68: suminf.    2.84566 (6) obj. -354557 iterations 9
+Cbc0038I Pass  69: suminf.    8.08876 (22) obj. -354557 iterations 99
+Cbc0038I Pass  70: suminf.    4.50000 (11) obj. -354557 iterations 78
+Cbc0038I Pass  71: suminf.    4.00000 (10) obj. -354557 iterations 1
+Cbc0038I Pass  72: suminf.    2.23566 (5) obj. -354557 iterations 38
+Cbc0038I Pass  73: suminf.    2.23566 (5) obj. -354557 iterations 1
+Cbc0038I Pass  74: suminf.    2.23566 (5) obj. -354557 iterations 39
+Cbc0038I Pass  75: suminf.    2.23566 (5) obj. -354557 iterations 2
+Cbc0038I Pass  76: suminf.    2.23566 (5) obj. -354557 iterations 11
+Cbc0038I Pass  77: suminf.    5.85796 (19) obj. -354557 iterations 117
+Cbc0038I Pass  78: suminf.    2.73101 (7) obj. -354557 iterations 51
+Cbc0038I Pass  79: suminf.    2.66667 (6) obj. -355200 iterations 45
+Cbc0038I Pass  80: suminf.    2.43566 (5) obj. -354557 iterations 31
+Cbc0038I Pass  81: suminf.    2.43566 (5) obj. -354557 iterations 1
+Cbc0038I Pass  82: suminf.    2.43566 (5) obj. -354557 iterations 30
+Cbc0038I Pass  83: suminf.    2.43566 (5) obj. -354557 iterations 1
+Cbc0038I PaStatus =  OptimizationStatus.OPTIMAL
+Solution value  = 352210.00
+
+Solution:
+x_0_3 = 1.00
+x_0_34 = 1.00
+x_0_54 = 1.00
+x_1_33 = 1.00
+x_1_37 = 1.00
+x_1_72 = 1.00
+x_2_56 = 1.00
+x_2_64 = 1.00
+x_3_59 = 1.00
+x_4_7 = 1.00
+x_4_17 = 1.00
+x_4_27 = 1.00
+x_5_10 = 1.00
+x_5_11 = 1.00
+x_5_55 = 1.00
+x_6_20 = 1.00
+x_6_21 = 1.00
+x_8_26 = 1.00
+x_8_44 = 1.00
+x_8_48 = 1.00
+x_8_49 = 1.00
+x_9_13 = 1.00
+x_9_14 = 1.00
+x_11_16 = 1.00
+x_11_32 = 1.00
+x_11_57 = 1.00
+x_11_65 = 1.00
+x_12_0 = 1.00
+x_12_1 = 1.00
+x_12_31 = 1.00
+x_12_38 = 1.00
+x_13_6 = 1.00
+x_13_29 = 1.00
+x_13_36 = 1.00
+x_14_23 = 1.00
+x_14_25 = 1.00
+x_14_66 = 1.00
+x_14_73 = 1.00
+x_15_4 = 1.00
+x_15_5 = 1.00
+x_15_35 = 1.00
+x_15_43 = 1.00
+x_15_45 = 1.00
+x_16_30 = 1.00
+x_16_63 = 1.00
+x_18_19 = 1.00
+x_18_39 = 1.00
+x_18_40 = 1.00
+x_19_70 = 1.00
+x_20_8 = 1.00
+x_20_18 = 1.00
+x_20_28 = 1.00
+x_20_41 = 1.00
+x_21_2 = 1.00
+x_21_58 = 1.00
+x_21_69 = 1.00
+x_22_15 = 1.00
+x_22_52 = 1.00
+x_22_67 = 1.00
+x_23_12 = 1.00
+x_23_42 = 1.00
+x_23_47 = 1.00
+x_23_53 = 1.00
+x_24_46 = 1.00
+x_24_51 = 1.00
+x_24_60 = 1.00
+x_25_71 = 1.00
+x_26_68 = 1.00
+x_27_61 = 1.00
+x_27_62 = 1.00
+x_28_24 = 1.00
+x_29_9 = 1.00
+x_29_22 = 1.00
+x_29_50 = 1.00
+y_0_0 = 1.00
+y_0_1 = 1.00
+y_0_2 = 1.00
+y_0_3 = 1.00
+y_1_1 = 1.00
+y_1_2 = 1.00
+y_1_3 = 1.00
+y_1_4 = 1.00
+y_1_5 = 1.00
+y_2_0 = 1.00
+y_2_2 = 1.00
+y_3_0 = 1.00
+y_3_1 = 1.00
+y_3_2 = 1.00
+y_3_3 = 1.00
+y_3_4 = 1.00
+y_4_0 = 1.00
+y_4_1 = 1.00
+y_4_2 = 1.00
+y_4_3 = 1.00
+y_4_4 = 1.00
+y_5_0 = 1.00
+y_5_1 = 1.00
+y_5_2 = 1.00
+y_5_3 = 1.00
+y_5_4 = 1.00
+y_6_0 = 1.00
+y_6_1 = 1.00
+y_6_2 = 1.00
+y_6_3 = 1.00
+y_6_4 = 1.00
+y_7_0 = 1.00
+y_7_4 = 1.00
+y_8_1 = 1.00
+y_8_3 = 1.00
+y_9_0 = 1.00
+y_9_1 = 1.00
+y_9_2 = 1.00
+y_9_3 = 1.00
+y_9_4 = 1.00
+y_10_0 = 1.00
+y_10_1 = 1.00
+y_10_2 = 1.00
+y_10_3 = 1.00
+y_10_4 = 1.00
+y_11_0 = 1.00
+y_11_1 = 1.00
+y_11_2 = 1.00
+y_11_3 = 1.00
+y_11_4 = 1.00
+y_12_0 = 1.00
+y_12_1 = 1.00
+y_12_2 = 1.00
+y_12_3 = 1.00
+y_12_4 = 1.00
+y_13_0 = 1.00
+y_13_1 = 1.00
+y_13_2 = 1.00
+y_13_3 = 1.00
+y_13_4 = 1.00
+y_14_0 = 1.00
+y_14_1 = 1.00
+y_14_2 = 1.00
+y_14_3 = 1.00
+y_14_4 = 1.00
+y_14_5 = 1.00
+y_15_0 = 1.00
+y_15_2 = 1.00
+y_15_4 = 1.00
+y_16_0 = 1.00
+y_16_1 = 1.00
+y_16_3 = 1.00
+y_17_2 = 1.00
+y_17_3 = 1.00
+y_17_4 = 1.00
+y_18_0 = 1.00
+y_18_1 = 1.00
+y_18_2 = 1.00
+y_18_3 = 1.00
+y_18_4 = 1.00
+y_19_0 = 1.00
+y_19_1 = 1.00
+y_19_2 = 1.00
+y_19_3 = 1.00
+y_19_4 = 1.00
+y_19_5 = 1.00
+y_20_0 = 1.00
+y_20_1 = 1.00
+y_20_3 = 1.00
+y_20_4 = 1.00
+y_21_1 = 1.00
+y_21_2 = 1.00
+y_21_3 = 1.00
+y_21_5 = 1.00
+y_22_0 = 1.00
+y_22_1 = 1.00
+y_22_2 = 1.00
+y_22_3 = 1.00
+y_22_4 = 1.00
+y_22_5 = 1.00
+y_23_0 = 1.00
+y_23_1 = 1.00
+y_23_2 = 1.00
+y_23_3 = 1.00
+y_23_4 = 1.00
+y_24_0 = 1.00
+y_24_1 = 1.00
+y_24_2 = 1.00
+y_25_0 = 1.00
+y_25_1 = 1.00
+y_25_2 = 1.00
+y_25_3 = 1.00
+y_25_4 = 1.00
+y_25_5 = 1.00
+y_26_2 = 1.00
+y_26_4 = 1.00
+y_26_5 = 1.00
+y_27_0 = 1.00
+y_27_1 = 1.00
+y_27_2 = 1.00
+y_27_3 = 1.00
+y_27_4 = 1.00
+y_28_0 = 1.00
+y_28_1 = 1.00
+y_28_2 = 1.00
+y_28_3 = 1.00
+y_28_4 = 1.00
+y_29_1 = 1.00
+y_29_2 = 1.00
+y_29_3 = 1.00
+y_29_4 = 1.00
+lamb_0_0_0_2 = 1.00
+lamb_0_0_2_2 = 1.00
+lamb_0_0_2_3 = 1.00
+lamb_0_0_3_2 = 1.00
+lamb_0_0_4_2 = 1.00
+lamb_0_1_1_2 = 1.00
+lamb_0_1_5_2 = 1.00
+lamb_1_0_1_2 = 1.00
+lamb_1_0_3_2 = 1.00
+lamb_1_0_3_3 = 1.00
+lamb_1_0_5_1 = 1.00
+lamb_1_0_5_2 = 1.00
+lamb_1_1_0_2 = 1.00
+lamb_2_0_0_1 = 1.00
+lamb_2_0_2_1 = 1.00
+lamb_2_0_2_2 = 1.00
+lamb_2_0_4_2 = 1.00
+lamb_2_1_0_2 = 1.00
+lamb_2_1_1_2 = 1.00
+lamb_2_1_3_2 = 1.00
+lamb_2_1_5_2 = 1.00
+lamb_3_0_0_2 = 1.00
+lamb_3_0_3_2 = 1.00
+lamb_3_0_5_2 = 1.00
+lamb_3_1_2_2 = 1.00
+lamb_3_1_4_2 = 1.00
+lamb_4_0_0_2 = 1.00
+lamb_4_0_1_2 = 1.00
+lamb_4_0_2_2 = 1.00
+lamb_4_0_4_2 = 1.00
+lamb_4_1_5_2 = 1.00
+lamb_5_0_0_2 = 1.00
+lamb_5_0_1_2 = 1.00
+lamb_5_0_1_3 = 1.00
+lamb_5_0_2_2 = 1.00
+lamb_5_0_3_1 = 1.00
+lamb_5_0_3_2 = 1.00
+lamb_5_0_4_2 = 1.00
+lamb_5_1_5_2 = 1.00
+lamb_6_0_1_1 = 1.00
+lamb_6_0_3_2 = 1.00
+lamb_6_0_3_3 = 1.00
+lamb_6_0_5_2 = 1.00
+lamb_7_0_0_2 = 1.00
+lamb_7_0_1_2 = 1.00
+lamb_7_0_2_2 = 1.00
+lamb_7_0_3_2 = 1.00
+lamb_7_0_4_2 = 1.00
+lamb_7_0_5_2 = 1.00
+lamb_8_0_0_2 = 1.00
+lamb_8_0_1_2 = 1.00
+lamb_8_0_1_3 = 1.00
+lamb_8_0_4_2 = 1.00
+lamb_8_1_2_2 = 1.00
+lamb_8_1_5_2 = 1.00
+lamb_9_0_0_2 = 1.00
+lamb_9_0_1_3 = 1.00
+lamb_9_0_2_2 = 1.00
+lamb_9_0_3_1 = 1.00
+lamb_9_0_4_2 = 1.00
+lamb_9_0_5_2 = 1.00
+lamb_10_0_0_2 = 1.00
+lamb_10_0_2_2 = 1.00
+lamb_10_0_4_2 = 1.00
+lamb_10_1_5_2 = 1.00
+lamb_11_0_0_2 = 1.00
+lamb_11_0_1_1 = 1.00
+lamb_11_0_1_2 = 1.00
+lamb_11_0_3_1 = 1.00
+lamb_11_0_4_2 = 1.00
+lamb_11_1_2_2 = 1.00
+lamb_11_1_3_2 = 1.00
+lamb_11_1_5_2 = 1.00
+lamb_12_0_0_2 = 1.00
+lamb_12_0_0_3 = 1.00
+lamb_12_0_1_2 = 1.00
+lamb_12_0_3_2 = 1.00
+lamb_12_0_4_2 = 1.00
+lamb_12_1_2_2 = 1.00
+lamb_12_1_5_2 = 1.00
+lamb_13_0_0_2 = 1.00
+lamb_13_0_2_2 = 1.00
+lamb_13_0_4_2 = 1.00
+lamb_13_0_4_3 = 1.00
+lamb_13_0_5_2 = 1.00
+lamb_14_0_0_2 = 1.00
+lamb_14_0_1_2 = 1.00
+lamb_14_0_1_3 = 1.00
+lamb_14_0_2_2 = 1.00
+lamb_14_0_3_1 = 1.00
+lamb_14_0_4_2 = 1.00
+lamb_14_0_5_1 = 1.00
+lamb_14_0_5_2 = 1.00
+lamb_15_0_0_1 = 1.00
+lamb_15_0_2_1 = 1.00
+lamb_15_0_2_2 = 1.00
+lamb_15_0_3_2 = 1.00
+lamb_15_0_4_2 = 1.00
+lamb_15_0_4_3 = 1.00
+lamb_15_0_5_2 = 1.00
+lamb_15_1_0_2 = 1.00
+lamb_15_1_1_2 = 1.00
+lamb_16_0_0_2 = 1.00
+lamb_16_0_1_2 = 1.00
+lamb_16_0_2_2 = 1.00
+lamb_16_1_3_2 = 1.00
+lamb_16_1_4_2 = 1.00
+lamb_16_1_5_2 = 1.00
+lamb_17_0_0_2 = 1.00
+lamb_17_0_2_2 = 1.00
+lamb_17_0_4_2 = 1.00
+lamb_17_1_1_2 = 1.00
+lamb_17_1_3_2 = 1.00
+lamb_17_1_5_2 = 1.00
+lamb_18_0_1_2 = 1.00
+lamb_18_0_2_2 = 1.00
+lamb_18_0_4_3 = 1.00
+lamb_18_1_3_3 = 1.00
+lamb_18_1_5_2 = 1.00
+lamb_19_0_0_1 = 1.00
+lamb_19_0_0_2 = 1.00
+lamb_19_0_2_2 = 1.00
+lamb_19_0_3_2 = 1.00
+lamb_19_0_5_1 = 1.00
+lamb_19_1_5_2 = 1.00
+lamb_20_0_0_2 = 1.00
+lamb_20_0_2_2 = 1.00
+lamb_20_0_3_2 = 1.00
+lamb_20_0_4_1 = 1.00
+lamb_20_0_5_2 = 1.00
+lamb_20_1_1_2 = 1.00
+lamb_20_1_4_2 = 1.00
+lamb_21_0_0_2 = 1.00
+lamb_21_0_1_2 = 1.00
+lamb_21_0_2_2 = 1.00
+lamb_21_0_3_2 = 1.00
+lamb_21_0_4_2 = 1.00
+lamb_21_0_5_1 = 1.00
+lamb_21_1_5_2 = 1.00
+lamb_22_0_0_2 = 1.00
+lamb_22_0_1_1 = 1.00
+lamb_22_0_1_2 = 1.00
+lamb_22_0_2_2 = 1.00
+lamb_22_0_3_1 = 1.00
+lamb_22_0_4_2 = 1.00
+lamb_22_0_5_1 = 1.00
+lamb_22_0_5_2 = 1.00
+lamb_22_1_3_2 = 1.00
+lamb_23_0_2_2 = 1.00
+lamb_23_0_2_3 = 1.00
+lamb_23_0_3_2 = 1.00
+lamb_23_0_3_3 = 1.00
+lamb_23_1_0_2 = 1.00
+lamb_23_1_5_2 = 1.00
+lamb_24_0_0_1 = 1.00
+lamb_24_0_0_2 = 1.00
+lamb_24_0_0_3 = 1.00
+lamb_24_0_1_2 = 1.00
+lamb_24_0_2_1 = 1.00
+lamb_24_0_2_2 = 1.00
+lamb_24_0_3_2 = 1.00
+lamb_24_0_4_2 = 1.00
+lamb_24_1_5_2 = 1.00
+lamb_25_0_0_2 = 1.00
+lamb_25_0_1_2 = 1.00
+lamb_25_0_4_2 = 1.00
+lamb_25_0_5_1 = 1.00
+lamb_25_0_5_2 = 1.00
+lamb_25_1_2_2 = 1.00
+lamb_26_0_0_2 = 1.00
+lamb_26_0_3_2 = 1.00
+lamb_26_0_5_1 = 1.00
+lamb_26_0_5_2 = 1.00
+lamb_26_1_1_2 = 1.00
+lamb_26_1_2_2 = 1.00
+lamb_26_1_4_2 = 1.00
+lamb_27_1_0_2 = 1.00
+lamb_27_1_1_2 = 1.00
+lamb_27_1_1_3 = 1.00
+lamb_27_1_2_2 = 1.00
+lamb_27_1_3_2 = 1.00
+lamb_27_1_4_2 = 1.00
+lamb_27_1_5_2 = 1.00
+lamb_28_0_0_2 = 1.00
+lamb_28_0_1_2 = 1.00
+lamb_28_0_2_2 = 1.00
+lamb_28_0_4_2 = 1.00
+lamb_28_0_5_2 = 1.00
+lamb_28_1_3_2 = 1.00
+lamb_29_0_1_2 = 1.00
+lamb_29_0_3_2 = 1.00
+lamb_29_0_3_3 = 1.00
+lamb_29_0_4_2 = 1.00
+lamb_29_0_5_2 = 1.00
+lamb_29_1_0_2 = 1.00
+lamb_29_1_2_2 = 1.00
+g_min_2 = 1.00
+g_min_3 = 4.00
+g_min_5 = 1.00
+g_min_6 = 2.00
+g_min_8 = 3.00
+g_min_9 = 2.00
+g_min_16 = 1.00
+g_min_19 = 4.00
+g_min_22 = 2.00
+g_min_24 = 2.00
+g_min_25 = 4.00
+g_min_26 = 4.00
+g_min_28 = 8.00
+sigma_0 = 1.00
+sigma_1 = 1.00
+sigma_5 = 1.00
+sigma_6 = 1.00
+sigma_8 = 1.00
+sigma_9 = 1.00
+sigma_12 = 1.00
+sigma_13 = 1.00
+sigma_14 = 1.00
+sigma_15 = 1.00
+sigma_18 = 2.00
+sigma_23 = 2.00
+sigma_24 = 1.00
+sigma_27 = 1.00
+sigma_29 = 1.00
+ss  84: suminf.    2.43566 (5) obj. -354557 iterations 15
+Cbc0038I Pass  85: suminf.    6.75854 (16) obj. -354557 iterations 103
+Cbc0038I Pass  86: suminf.    3.50000 (8) obj. -356000 iterations 65
+Cbc0038I Pass  87: suminf.    2.85566 (6) obj. -354557 iterations 35
+Cbc0038I Pass  88: suminf.    2.85566 (6) obj. -354557 iterations 7
+Cbc0038I Pass  89: suminf.    2.85566 (6) obj. -354557 iterations 8
+Cbc0038I Pass  90: suminf.    2.85566 (6) obj. -354557 iterations 1
+Cbc0038I Pass  91: suminf.    2.85566 (6) obj. -354557 iterations 36
+Cbc0038I No solution found this major pass
+Cbc0038I Before mini branch and bound, 510 integers at bound fixed and 50 continuous of which 8 were internal integer and 0 internal continuous
+Cbc0038I Mini branch and bound did not improve solution (0.19 seconds)
+Cbc0038I After 0.19 seconds - Feasibility pump exiting with objective of -341110 - took 0.13 seconds
+Cbc0012I Integer solution of -341110 found by feasibility pump after 0 iterations and 0 nodes (0.19 seconds)
+Cbc0012I Integer solution of -352210 found by DiveCoefficient after 49 iterations and 0 nodes (0.22 seconds)
+Cbc0031I 26 added rows had average density of 13.384615
+Cbc0013I At root node, 26 cuts changed objective from -374100 to -352210 in 3 passes
+Cbc0014I Cut generator 0 (Probing) - 38 row cuts average 2.0 elements, 78 column cuts (78 active)  in 0.011 seconds - new frequency is 1
+Cbc0014I Cut generator 1 (Gomory) - 25 row cuts average 20.6 elements, 0 column cuts (0 active)  in 0.001 seconds - new frequency is 1
+Cbc0014I Cut generator 2 (Knapsack) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.001 seconds - new frequency is -100
+Cbc0014I Cut generator 3 (Clique) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.000 seconds - new frequency is -100
+Cbc0014I Cut generator 4 (OddWheel) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.004 seconds - new frequency is -100
+Cbc0014I Cut generator 5 (MixedIntegerRounding2) - 12 row cuts average 7.3 elements, 0 column cuts (0 active)  in 0.001 seconds - new frequency is 1
+Cbc0014I Cut generator 6 (FlowCover) - 0 row cuts average 0.0 elements, 0 column cuts (0 active)  in 0.000 seconds - new frequency is -100
+Cbc0014I Cut generator 7 (TwoMirCuts) - 62 row cuts average 17.3 elements, 0 column cuts (0 active)  in 0.002 seconds - new frequency is 1
+Cbc0014I Cut generator 8 (ZeroHalf) - 16 row cuts average 12.9 elements, 0 column cuts (0 active)  in 0.002 seconds - new frequency is 1
+Cbc0001I Search completed - best objective -352210, took 49 iterations and 0 nodes (0.22 seconds)
+Cbc0035I Maximum depth 0, 42 variables fixed on reduced cost
+Total time (CPU seconds):       0.23   (Wallclock seconds):       0.24
+
