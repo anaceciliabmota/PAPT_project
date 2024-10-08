@@ -1,6 +1,8 @@
 
 # to be done: private variables ?
 from mip import * 
+from openpyxl import Workbook
+from openpyxl.styles import Border, Side, Font, PatternFill, Alignment
 
 class ModelOptimization:
 
@@ -46,7 +48,7 @@ class ModelOptimization:
         penalty += self.overload_penalty(data)
         penalty += self.shift_penalty(data)
         penalty += self.work_at_night_penalty(data)
-        #penalty += self.pre_alocation_penalty(data)
+        penalty += self.pre_alocation_penalty(data)
 
         return penalty
 
@@ -351,7 +353,58 @@ class ModelOptimization:
             if v.x > 0:
                 print(f"{v.name} = {v.x:.2f}")
 
+    def save_solution(self, filename, data):
+        wb = Workbook()
+
+        sheet = wb.active
+
+        sheet.title = "Resultado"
+
+        sheet.append(['Código', 'Disciplina', 'Turma', 'Creditos', 'Centro', 'Alocação'])
+        
+        header_fill = PatternFill(start_color="8C8C8C", end_color="FFFF00", fill_type="solid")  # Fundo amarelo
+        header_font = Font(bold=True, size=14)  # Texto em negrito e maior
+        alignment = Alignment(horizontal="center", vertical="center")
+
+        # Aplicar formatação a cada célula do cabeçalho
+        for cell in sheet[1]:
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = alignment
+        
+        sheet.row_dimensions[1].height = 30
+
+        sheet.column_dimensions['A'].width = 15  # Código
+        sheet.column_dimensions['B'].width = 60  # Disciplina
+        sheet.column_dimensions['C'].width = 15  # Turma
+        sheet.column_dimensions['D'].width = 15  # Creditos
+        sheet.column_dimensions['E'].width = 15  # Centro
+        sheet.column_dimensions['F'].width = 60  # Alocação
+
+        thin_border = Border(
+            left=Side(style='thin'),
+            right=Side(style='thin'),
+            top=Side(style='thin'),
+            bottom=Side(style='thin')
+        )
+
+        row_number = 2
+
+        for j in data.T:
+            course = data.list_of_classes[j]
+            for i in data.P:
+                professor = data.list_of_professors[i]
+                print(self.x[i][j].x)
+                if self.x[i][j].x    == 1:
+                    sheet.append([course.code, course.name, course.number, course.credit, course.center, professor.name])
+                
+                    for col in range(1, 7):  # De 'A' (1) até 'F' (6)
+                        sheet.cell(row=row_number, column=col).border = thin_border
+                    row_number += 1
+
+        for col in range(1, 7):  # Colunas 'A' até 'F'
+            sheet.cell(row=1, column=col).border = thin_border
 
 
-
+        wb.save(filename)
 

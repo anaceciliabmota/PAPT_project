@@ -19,4 +19,6 @@ model.save("model2.lp")
 
 model.solve()
 
+model.save_solution("../solucao.xlsx", data)
+
 
